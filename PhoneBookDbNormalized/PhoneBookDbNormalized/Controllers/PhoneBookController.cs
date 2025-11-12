@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using PhoneBookDbNormalized.Models;
 
 namespace PhoneBookDbNormalized.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     [Produces("application/json")]
@@ -43,7 +45,7 @@ namespace PhoneBookDbNormalized.Controllers
                 return Ok(employees);
         }
     }
-
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     [Produces("application/json")]
@@ -107,7 +109,8 @@ namespace PhoneBookDbNormalized.Controllers
             return Ok(roles);
 
         }
-
+        // PUT: Chỉ Admin mới được cập nhật
+        [Authorize(Policy = "AdminOnly")]
         [HttpPut("{userId}")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]

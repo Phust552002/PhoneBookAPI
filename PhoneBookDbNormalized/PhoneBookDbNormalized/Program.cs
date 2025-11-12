@@ -17,39 +17,73 @@ builder.Services.AddControllers();
 builder.Services.AddScoped<IPhoneBookRepository, PhoneBookRepository>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-    .AddCookie(options =>
-    {
-        options.Cookie.Name = "PhoneBookAuth";
-        options.Cookie.HttpOnly = true;
-        options.Cookie.SecurePolicy = CookieSecurePolicy.None;
-        options.ExpireTimeSpan = TimeSpan.FromHours(1);
-        options.SlidingExpiration = true;
-    });
 builder.Services.AddAuthorization();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo
     {
+        Title = "PhoneBook API",
         Version = "v1",
-        Title = "Phone Book API",
-        Description = "API quản lý Phonebook SAGS",
-
+        Description = "API cho hệ thống danh bạ điện thoại"
     });
 
-    // Thêm XML comments hiển thị mô tả trong Swagger UI
-    var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFilename);
-    if (File.Exists(xmlPath))
+    // Cấu hình Cookie Authentication cho Swagger
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
-        options.IncludeXmlComments(xmlPath);
-    }
+        Name = "Authorization",
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer",
+        BearerFormat = "Cookie",
+        In = ParameterLocation.Cookie,
+        Description = "Đăng nhập bằng Cookie Authentication. Sử dụng endpoint /api/Auth/login để đăng nhập trước."
+    });
 
-    options.UseInlineDefinitionsForEnums();
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
+});
+// Cấu hình Cookie Authentication
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.Cookie.Name = "PhoneBookAuth";
+        options.Cookie.HttpOnly = true;
+        options.ExpireTimeSpan = TimeSpan.FromHours(1);
+        options.SlidingExpiration = true;
+        options.LoginPath = "/api/Auth/login";
+
+        // Quan trọng: Cho phép Swagger sử dụng cookie
+        options.Cookie.SameSite = SameSiteMode.Lax;
+
+        // Trả về 401 thay vì redirect cho API
+        options.Events.OnRedirectToLogin = context =>
+        {
+            context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+            return Task.CompletedTask;
+        };
+    });
+// Cấu hình Authorization với Policy
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminOnly", policy =>
+        policy.RequireClaim("IsAdmin", "True"));
+
+    options.AddPolicy("AdminRoles", policy =>
+        policy.RequireRole("1", "2", "4", "8", "10", "20"));
 });
 var app = builder.Build();
-
 
 
 // Configure the HTTP request pipeline

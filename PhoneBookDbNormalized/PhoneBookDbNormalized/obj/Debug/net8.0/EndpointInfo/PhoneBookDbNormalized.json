@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.4",
   "info": {
-    "title": "Phone Book API",
-    "description": "API quản lý Phonebook SAGS",
+    "title": "PhoneBook API",
+    "description": "API cho hệ thống danh bạ điện thoại",
     "version": "v1"
   },
   "paths": {
@@ -544,6 +544,19 @@
         },
         "additionalProperties": false
       }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "Đăng nhập bằng Cookie Authentication. Sử dụng endpoint /api/Auth/login để đăng nhập trước.",
+        "name": "Authorization",
+        "in": "cookie"
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }

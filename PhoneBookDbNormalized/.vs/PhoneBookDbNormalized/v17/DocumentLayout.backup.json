@@ -1,17 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Admin\\Documents\\GitHub\\PhoneBookAPI\\PhoneBookDbNormalized\\",
+  "WorkspaceRootPath": "C:\\Users\\huynh\\Documents\\GitHub\\PhoneBookAPI\\PhoneBookDbNormalized\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C7DCD2C6-0213-40D2-8D66-C3B6992DE1A6}|PhoneBookDbNormalized\\PhoneBookDbNormalized.csproj|c:\\users\\admin\\documents\\github\\phonebookapi\\phonebookdbnormalized\\phonebookdbnormalized\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C7DCD2C6-0213-40D2-8D66-C3B6992DE1A6}|PhoneBookDbNormalized\\PhoneBookDbNormalized.csproj|c:\\users\\huynh\\documents\\github\\phonebookapi\\phonebookdbnormalized\\phonebookdbnormalized\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C7DCD2C6-0213-40D2-8D66-C3B6992DE1A6}|PhoneBookDbNormalized\\PhoneBookDbNormalized.csproj|solutionrelative:phonebookdbnormalized\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C7DCD2C6-0213-40D2-8D66-C3B6992DE1A6}|PhoneBookDbNormalized\\PhoneBookDbNormalized.csproj|c:\\users\\admin\\documents\\github\\phonebookapi\\phonebookdbnormalized\\phonebookdbnormalized\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{C7DCD2C6-0213-40D2-8D66-C3B6992DE1A6}|PhoneBookDbNormalized\\PhoneBookDbNormalized.csproj|c:\\users\\huynh\\documents\\github\\phonebookapi\\phonebookdbnormalized\\phonebookdbnormalized\\controllers\\phonebookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7DCD2C6-0213-40D2-8D66-C3B6992DE1A6}|PhoneBookDbNormalized\\PhoneBookDbNormalized.csproj|solutionrelative:phonebookdbnormalized\\controllers\\phonebookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7DCD2C6-0213-40D2-8D66-C3B6992DE1A6}|PhoneBookDbNormalized\\PhoneBookDbNormalized.csproj|c:\\users\\huynh\\documents\\github\\phonebookapi\\phonebookdbnormalized\\phonebookdbnormalized\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7DCD2C6-0213-40D2-8D66-C3B6992DE1A6}|PhoneBookDbNormalized\\PhoneBookDbNormalized.csproj|solutionrelative:phonebookdbnormalized\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7DCD2C6-0213-40D2-8D66-C3B6992DE1A6}|PhoneBookDbNormalized\\PhoneBookDbNormalized.csproj|c:\\users\\huynh\\documents\\github\\phonebookapi\\phonebookdbnormalized\\phonebookdbnormalized\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7DCD2C6-0213-40D2-8D66-C3B6992DE1A6}|PhoneBookDbNormalized\\PhoneBookDbNormalized.csproj|solutionrelative:phonebookdbnormalized\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7DCD2C6-0213-40D2-8D66-C3B6992DE1A6}|PhoneBookDbNormalized\\PhoneBookDbNormalized.csproj|c:\\users\\huynh\\documents\\github\\phonebookapi\\phonebookdbnormalized\\phonebookdbnormalized\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7DCD2C6-0213-40D2-8D66-C3B6992DE1A6}|PhoneBookDbNormalized\\PhoneBookDbNormalized.csproj|solutionrelative:phonebookdbnormalized\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7DCD2C6-0213-40D2-8D66-C3B6992DE1A6}|PhoneBookDbNormalized\\PhoneBookDbNormalized.csproj|c:\\users\\huynh\\documents\\github\\phonebookapi\\phonebookdbnormalized\\phonebookdbnormalized\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{C7DCD2C6-0213-40D2-8D66-C3B6992DE1A6}|PhoneBookDbNormalized\\PhoneBookDbNormalized.csproj|solutionrelative:phonebookdbnormalized\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C7DCD2C6-0213-40D2-8D66-C3B6992DE1A6}|PhoneBookDbNormalized\\PhoneBookDbNormalized.csproj|c:\\users\\admin\\documents\\github\\phonebookapi\\phonebookdbnormalized\\phonebookdbnormalized\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{C7DCD2C6-0213-40D2-8D66-C3B6992DE1A6}|PhoneBookDbNormalized\\PhoneBookDbNormalized.csproj|c:\\users\\huynh\\documents\\github\\phonebookapi\\phonebookdbnormalized\\phonebookdbnormalized\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C7DCD2C6-0213-40D2-8D66-C3B6992DE1A6}|PhoneBookDbNormalized\\PhoneBookDbNormalized.csproj|solutionrelative:phonebookdbnormalized\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7DCD2C6-0213-40D2-8D66-C3B6992DE1A6}|PhoneBookDbNormalized\\PhoneBookDbNormalized.csproj|c:\\users\\huynh\\documents\\github\\phonebookapi\\phonebookdbnormalized\\phonebookdbnormalized\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{C7DCD2C6-0213-40D2-8D66-C3B6992DE1A6}|PhoneBookDbNormalized\\PhoneBookDbNormalized.csproj|solutionrelative:phonebookdbnormalized\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
@@ -22,44 +42,110 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\PhoneBookAPI\\PhoneBookDbNormalized\\PhoneBookDbNormalized\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "PhoneBookDbNormalized\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\PhoneBookAPI\\PhoneBookDbNormalized\\PhoneBookDbNormalized\\Properties\\launchSettings.json",
-              "RelativeToolTip": "PhoneBookDbNormalized\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-12T07:21:13.53Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\PhoneBookAPI\\PhoneBookDbNormalized\\PhoneBookDbNormalized\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\huynh\\Documents\\GitHub\\PhoneBookAPI\\PhoneBookDbNormalized\\PhoneBookDbNormalized\\Program.cs",
               "RelativeDocumentMoniker": "PhoneBookDbNormalized\\Program.cs",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\PhoneBookAPI\\PhoneBookDbNormalized\\PhoneBookDbNormalized\\Program.cs",
+              "ToolTip": "C:\\Users\\huynh\\Documents\\GitHub\\PhoneBookAPI\\PhoneBookDbNormalized\\PhoneBookDbNormalized\\Program.cs",
               "RelativeToolTip": "PhoneBookDbNormalized\\Program.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAcwDsAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-12T07:11:19.337Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "C:\\Users\\huynh\\Documents\\GitHub\\PhoneBookAPI\\PhoneBookDbNormalized\\PhoneBookDbNormalized\\Services\\JwtService.cs",
+              "RelativeDocumentMoniker": "PhoneBookDbNormalized\\Services\\JwtService.cs",
+              "ToolTip": "C:\\Users\\huynh\\Documents\\GitHub\\PhoneBookAPI\\PhoneBookDbNormalized\\PhoneBookDbNormalized\\Services\\JwtService.cs",
+              "RelativeToolTip": "PhoneBookDbNormalized\\Services\\JwtService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T07:53:31.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "PhoneBookController.cs",
+              "DocumentMoniker": "C:\\Users\\huynh\\Documents\\GitHub\\PhoneBookAPI\\PhoneBookDbNormalized\\PhoneBookDbNormalized\\Controllers\\PhoneBookController.cs",
+              "RelativeDocumentMoniker": "PhoneBookDbNormalized\\Controllers\\PhoneBookController.cs",
+              "ToolTip": "C:\\Users\\huynh\\Documents\\GitHub\\PhoneBookAPI\\PhoneBookDbNormalized\\PhoneBookDbNormalized\\Controllers\\PhoneBookController.cs*",
+              "RelativeToolTip": "PhoneBookDbNormalized\\Controllers\\PhoneBookController.cs*",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwC8AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T07:53:48.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\huynh\\Documents\\GitHub\\PhoneBookAPI\\PhoneBookDbNormalized\\PhoneBookDbNormalized\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "PhoneBookDbNormalized\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\huynh\\Documents\\GitHub\\PhoneBookAPI\\PhoneBookDbNormalized\\PhoneBookDbNormalized\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "PhoneBookDbNormalized\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAqwH0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T07:53:18.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\PhoneBookAPI\\PhoneBookDbNormalized\\PhoneBookDbNormalized\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\huynh\\Documents\\GitHub\\PhoneBookAPI\\PhoneBookDbNormalized\\PhoneBookDbNormalized\\appsettings.json",
               "RelativeDocumentMoniker": "PhoneBookDbNormalized\\appsettings.json",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\PhoneBookAPI\\PhoneBookDbNormalized\\PhoneBookDbNormalized\\appsettings.json",
+              "ToolTip": "C:\\Users\\huynh\\Documents\\GitHub\\PhoneBookAPI\\PhoneBookDbNormalized\\PhoneBookDbNormalized\\appsettings.json",
               "RelativeToolTip": "PhoneBookDbNormalized\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-12T07:11:20.492Z"
+              "WhenOpened": "2025-11-12T07:11:20.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\huynh\\Documents\\GitHub\\PhoneBookAPI\\PhoneBookDbNormalized\\PhoneBookDbNormalized\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "PhoneBookDbNormalized\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\huynh\\Documents\\GitHub\\PhoneBookAPI\\PhoneBookDbNormalized\\PhoneBookDbNormalized\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "PhoneBookDbNormalized\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-12T07:56:19.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\huynh\\Documents\\GitHub\\PhoneBookAPI\\PhoneBookDbNormalized\\PhoneBookDbNormalized\\Services\\IAuthService.cs",
+              "RelativeDocumentMoniker": "PhoneBookDbNormalized\\Services\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\huynh\\Documents\\GitHub\\PhoneBookAPI\\PhoneBookDbNormalized\\PhoneBookDbNormalized\\Services\\IAuthService.cs",
+              "RelativeToolTip": "PhoneBookDbNormalized\\Services\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T07:53:32.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\huynh\\Documents\\GitHub\\PhoneBookAPI\\PhoneBookDbNormalized\\PhoneBookDbNormalized\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "PhoneBookDbNormalized\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\huynh\\Documents\\GitHub\\PhoneBookAPI\\PhoneBookDbNormalized\\PhoneBookDbNormalized\\Properties\\launchSettings.json",
+              "RelativeToolTip": "PhoneBookDbNormalized\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-12T07:21:13.53Z"
             }
           ]
         }
