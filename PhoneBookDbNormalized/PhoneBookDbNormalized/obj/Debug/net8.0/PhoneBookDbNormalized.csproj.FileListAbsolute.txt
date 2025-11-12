@@ -282,3 +282,4 @@ C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNo
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Debug\net8.0\PhoneBookDbNormalized.pdb
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Debug\net8.0\PhoneBookDbNormalized.genruntimeconfig.cache
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Debug\net8.0\ref\PhoneBookDbNormalized.dll
+C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Debug\net8.0\PhoneBookDbNormalized.sourcelink.json

@@ -9,12 +9,10 @@ namespace PhoneBookDbNormalized.Controllers
     public class DepartmentsController : ControllerBase
     {
         private readonly IPhoneBookRepository _repository;
-        private readonly ILogger<DepartmentsController> _logger;
 
-        public DepartmentsController(IPhoneBookRepository repository, ILogger<DepartmentsController> logger)
+        public DepartmentsController(IPhoneBookRepository repository)
         {
             _repository = repository;
-            _logger = logger;
         }
         [HttpGet]
         [ProducesResponseType(typeof(List<Department>), 200)]
