@@ -2,14 +2,15 @@ C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNo
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\appsettings.json
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\PhoneBookDbNormalized.dll
-C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\PhoneBookDbNormalized.deps.json
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\PhoneBookDbNormalized.runtimeconfig.json
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\PhoneBookDbNormalized.pdb
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\Azure.Core.dll
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\Azure.Identity.dll
+C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\BCrypt.Net-Next.dll
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\Dapper.dll
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\Dapper.Contrib.dll
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\Humanizer.dll
+C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll
@@ -29,6 +30,10 @@ C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNo
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\Microsoft.Data.SqlClient.dll
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\Microsoft.DiaSymReader.dll
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\Microsoft.DotNet.Scaffolding.Shared.dll
+C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\Microsoft.EntityFrameworkCore.dll
+C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\Microsoft.Extensions.DependencyModel.dll
@@ -253,3 +258,4 @@ C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNo
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Release\net8.0\PubTmp\Out\PhoneBookDbNormalized.deps.json
