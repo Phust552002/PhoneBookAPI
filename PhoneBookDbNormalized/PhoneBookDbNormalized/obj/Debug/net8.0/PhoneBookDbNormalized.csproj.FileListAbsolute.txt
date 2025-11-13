@@ -263,14 +263,10 @@ C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNo
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Debug\net8.0\PhoneBookDbNormalized.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Debug\net8.0\PhoneBookDbNormalized.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Debug\net8.0\PhoneBookDbNormalized.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Debug\net8.0\PhoneBookDbNormalized.RazorAssemblyInfo.cache
-C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Debug\net8.0\PhoneBookDbNormalized.RazorAssemblyInfo.cs
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Debug\net8.0\rjimswa.dswa.cache.json
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
-C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Debug\net8.0\scopedcss\bundle\PhoneBookDbNormalized.styles.css
-C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Debug\net8.0\scopedcss\projectbundle\PhoneBookDbNormalized.bundle.scp.css
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Debug\net8.0\staticwebassets.development.json
@@ -568,3 +564,10 @@ C:\Users\huynh\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNo
 C:\Users\huynh\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Debug\net8.0\PhoneBookDbNormalized.pdb
 C:\Users\huynh\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Debug\net8.0\PhoneBookDbNormalized.genruntimeconfig.cache
 C:\Users\huynh\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\obj\Debug\net8.0\ref\PhoneBookDbNormalized.dll
+C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll

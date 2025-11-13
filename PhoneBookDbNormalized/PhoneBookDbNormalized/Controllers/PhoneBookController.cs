@@ -4,7 +4,7 @@ using PhoneBookDbNormalized.Models;
 
 namespace PhoneBookDbNormalized.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Manager,Admin")]
     [ApiController]
     [Route("api/[controller]")]
     [Produces("application/json")]
@@ -45,7 +45,7 @@ namespace PhoneBookDbNormalized.Controllers
                 return Ok(employees);
         }
     }
-    [Authorize]
+    [Authorize(Roles = "Manager")]
     [ApiController]
     [Route("api/[controller]")]
     [Produces("application/json")]
@@ -110,7 +110,6 @@ namespace PhoneBookDbNormalized.Controllers
 
         }
         // PUT: Chỉ Admin mới được cập nhật
-        [Authorize(Policy = "AdminOnly")]
         [HttpPut("{userId}")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]

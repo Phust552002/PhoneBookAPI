@@ -1,80 +1,114 @@
-﻿using PhoneBookDbNormalized.Models;
-using System.Security.Cryptography;
+﻿using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using System.Text;
-using System.Diagnostics;
-using PhoneBookDbNormalized.Repositories;
+using PhoneBookDbNormalized.Models;
+using PhoneBookDbNormalized.Data;
+using PhoneBookDbNormalized.Settings;
+using Microsoft.EntityFrameworkCore;
+using PhoneBookDbNormalized.Models.DTOs;
 
 namespace PhoneBookDbNormalized.Services
 {
     public class AuthService : IAuthService
     {
-        private readonly IPhoneBookRepository _repo;
+        private readonly IConfiguration _configuration;
 
-        public AuthService(IPhoneBookRepository repo)
+        // HARDCODED USERS - Không cần database
+        private readonly List<User> _users = new List<User>
+    {
+        new User
         {
-            _repo = repo;
+            Id = 1,
+            Username = "manager",
+            Password = "456",
+            Role = "Manager"
+        },
+        new User
+        {
+            Id = 2,
+            Username = "admin",
+            Password = "123",
+            Role = "Admin"
+        },
+        new User
+        {
+            Id = 3,
+            Username = "manager2",
+            Password = "456",
+            Role = "Manager"
+        }
+    };
+
+        public AuthService(IConfiguration configuration)
+        {
+            _configuration = configuration;
         }
 
-        public async Task<Employee> AuthenticateAsync(string username, string password)
+        public LoginResponse Login(LoginRequest request)
         {
-            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
-            {
-                return null;
-            }
+            var user = _users.FirstOrDefault(u =>
+                u.Username == request.Username &&
+                u.Password == request.Password);
 
-            var employee = await _repo.GetEmployeeByUsernameAsync(username);
-            if (employee == null)
+            if (user == null)
             {
-                return null;
+                throw new UnauthorizedAccessException("Invalid username or password");
             }
+            var token = GenerateJwtToken(user);
 
-            bool isPasswordValid = false;
-
-            // Trường hợp 1: Password đã được hash
-            if (!string.IsNullOrEmpty(employee.Password) && employee.Password.Length == 64)
+            return new LoginResponse
             {
-                isPasswordValid = VerifyPassword(password, employee.Password);
-            }
-            // Trường hợp 2: Password plain text (tạm thời để test)
-            else if (!string.IsNullOrEmpty(employee.Password))
-            {
-                isPasswordValid = (employee.Password == password);
-            }
-
-            if (!isPasswordValid)
-            {
-                return null;
-            }
-
-            return employee;
-        }
-        public async Task<List<int>> GetUserRolesAsync(int userId)
-        {
-            var roles = await _repo.GetUserRolesAsync(userId);
-            return roles;
+                Token = token,
+                Username = user.Username,
+                Role = user.Role
+            };
         }
 
-        public string HashPassword(string password)
+        public User GetUserByUsername(string username)
         {
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                StringBuilder builder = new StringBuilder();
-                foreach (byte b in bytes)
-                {
-                    builder.Append(b.ToString("x2"));
-                }
-                return builder.ToString();
-            }
+            return _users.FirstOrDefault(u => u.Username == username);
         }
 
-        public bool VerifyPassword(string password, string hashedPassword)
+        public List<User> GetAllUsers()
         {
-            if (string.IsNullOrEmpty(hashedPassword))
-                return false;
+            return _users.Select(u => new User
+            {
+                Id = u.Id,
+                Username = u.Username,
+                Role = u.Role
+            }).ToList();
+        }
 
-            string hashOfInput = HashPassword(password);
-            return StringComparer.OrdinalIgnoreCase.Compare(hashOfInput, hashedPassword) == 0;
+        private string GenerateJwtToken(User user)
+        {
+            var jwtSettings = _configuration.GetSection("JwtSettings");
+            var secretKey = jwtSettings["Secret"];
+
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.ASCII.GetBytes(secretKey);
+
+            var claims = new List<Claim>
+        {
+            new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+            new Claim(ClaimTypes.Name, user.Username),
+            new Claim(ClaimTypes.Role, user.Role),
+            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+        };
+
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(claims),
+                Expires = DateTime.UtcNow.AddMinutes(int.Parse(jwtSettings["ExpirationMinutes"])),
+                Issuer = jwtSettings["Issuer"],
+                Audience = jwtSettings["Audience"],
+                SigningCredentials = new SigningCredentials(
+                    new SymmetricSecurityKey(key),
+                    SecurityAlgorithms.HmacSha256Signature)
+            };
+
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            return tokenHandler.WriteToken(token);
         }
     }
 }

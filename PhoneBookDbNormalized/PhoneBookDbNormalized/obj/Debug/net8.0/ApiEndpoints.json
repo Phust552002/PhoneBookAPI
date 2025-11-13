@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "PhoneBookDbNormalized.Controllers.AccountController",
+    "Method": "Login",
+    "RelativePath": "api/Account/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "PhoneBookDbNormalized.Controllers.LoginRequestForm",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PhoneBookDbNormalized.Controllers.AccountController",
+    "Method": "Logout",
+    "RelativePath": "api/Account/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "PhoneBookDbNormalized.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/Auth/login",
@@ -9,17 +35,61 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "PhoneBookDbNormalized.Controllers.LoginRequest",
+        "Type": "PhoneBookDbNormalized.Models.DTOs.LoginRequest",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "PhoneBookDbNormalized.Models.DTOs.LoginResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 401
+      }
+    ]
   },
   {
     "ContainingType": "PhoneBookDbNormalized.Controllers.AuthController",
-    "Method": "Logout",
-    "RelativePath": "api/Auth/logout",
-    "HttpMethod": "POST",
+    "Method": "GetCurrentUser",
+    "RelativePath": "api/Auth/me",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 401
+      }
+    ]
+  },
+  {
+    "ContainingType": "PhoneBookDbNormalized.Controllers.AuthController",
+    "Method": "TestAdmin",
+    "RelativePath": "api/Auth/test-admin",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
@@ -27,8 +97,8 @@
   },
   {
     "ContainingType": "PhoneBookDbNormalized.Controllers.AuthController",
-    "Method": "Me",
-    "RelativePath": "api/Auth/me",
+    "Method": "TestManager",
+    "RelativePath": "api/Auth/test-manager",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

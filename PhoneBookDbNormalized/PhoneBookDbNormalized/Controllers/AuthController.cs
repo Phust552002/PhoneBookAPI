@@ -1,12 +1,8 @@
-﻿using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using PhoneBookDbNormalized.Models;
+using PhoneBookDbNormalized.Models.DTOs;
 using PhoneBookDbNormalized.Services;
-using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
-
 namespace PhoneBookDbNormalized.Controllers
 {
     [ApiController]
@@ -19,107 +15,60 @@ namespace PhoneBookDbNormalized.Controllers
         {
             _authService = authService;
         }
+
+
         [HttpPost("login")]
         [AllowAnonymous]
-        public async Task<IActionResult> Login([FromBody] LoginRequest request)
+        [ProducesResponseType(typeof(LoginResponse), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        public IActionResult Login([FromBody] LoginRequest request)
         {
-            if (request == null || string.IsNullOrWhiteSpace(request.Username) || string.IsNullOrWhiteSpace(request.Password))
-                return BadRequest("Thiếu thông tin đăng nhập.");
-
-            var employee = await _authService.AuthenticateAsync(request.Username, request.Password);
-            if (employee == null)
-                return Unauthorized("Tên đăng nhập hoặc mật khẩu không đúng.");
-
-            var employeeRoleIds = await _authService.GetUserRolesAsync(employee.UserId);
-            var adminRoleIds = new[] { 1, 2, 4, 8, 10, 20 };
-            bool isAdmin = employeeRoleIds.Any(id => adminRoleIds.Contains(id));
-
-            var claims = new List<Claim>
+            try
             {
-                new Claim(ClaimTypes.NameIdentifier, employee.UserId.ToString()),
-                new Claim(ClaimTypes.Name, employee.UserName ?? ""),
-                new Claim("FullName", employee.FullName ?? employee.UserName ?? ""),
-                new Claim("EmployeeCode", employee.EmployeeCode ?? ""),
-                new Claim("PositionName", employee.PositionName ?? "Nhân viên"),
-                new Claim("DepartmentId", employee.DepartmentId?.ToString() ?? "0"),
-                new Claim("IsAdmin", isAdmin.ToString())
-            };
-
-            foreach (var roleId in employeeRoleIds)
-            {
-                claims.Add(new Claim(ClaimTypes.Role, roleId.ToString()));
+                var response = _authService.Login(request);
+                return Ok(response);
             }
-
-            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-            var authProperties = new AuthenticationProperties
+            catch (UnauthorizedAccessException ex)
             {
-                IsPersistent = request.RememberMe,
-                ExpiresUtc = request.RememberMe
-                    ? DateTimeOffset.UtcNow.AddDays(1)
-                    : DateTimeOffset.UtcNow.AddHours(1)
-            };
-
-            await HttpContext.SignInAsync(
-                CookieAuthenticationDefaults.AuthenticationScheme,
-                new ClaimsPrincipal(claimsIdentity),
-                authProperties);
-
-            return Ok(new
-            {
-                Message = "Đăng nhập thành công",
-                User = new
-                {
-                    employee.UserId,
-                    employee.UserName,
-                    employee.FullName,
-                    IsAdmin = isAdmin,
-                    Roles = employeeRoleIds
-                }
-            });
+                return Unauthorized(new { message = ex.Message });
+            }
         }
-
-        [Authorize]
-        [HttpPost("logout")]
-        public async Task<IActionResult> Logout()
-        {
-            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return Ok(new { Message = "Đăng xuất thành công" });
-        }
-
-        [Authorize]
         [HttpGet("me")]
-        public IActionResult Me()
+        [Authorize]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        public IActionResult GetCurrentUser()
         {
+            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var username = User.Identity?.Name;
-            var fullName = User.FindFirst("FullName")?.Value;
-            var isAdmin = User.FindFirst("IsAdmin")?.Value;
-            var roles = User.Claims
-                .Where(c => c.Type == ClaimTypes.Role)
-                .Select(c => c.Value)
-                .ToList();
+            var role = User.FindFirst(ClaimTypes.Role)?.Value;
 
             return Ok(new
             {
-                username,
-                fullName,
-                isAdmin,
-                roles
+                userId = userId,
+                username = username,
+                role = role,
+                isAuthenticated = User.Identity?.IsAuthenticated ?? false,
+                authenticationType = User.Identity?.AuthenticationType,
+                allClaims = User.Claims.Select(c => new
+                {
+                    type = c.Type,
+                    value = c.Value
+                })
             });
         }
-    }
+        [HttpGet("test-manager")]
+        [Authorize(Roles = "Manager")]
+        public IActionResult TestManager()
+        {
+            return Ok(new { message = "✅ You are a Manager! You can access this." });
+        }
 
-    public class LoginRequest
-    {
-        [Required(ErrorMessage = "Vui lòng nhập tên đăng nhập")]
-        [Display(Name = "Tên đăng nhập")]
-        public string? Username { get; set; }
-
-        [Required(ErrorMessage = "Vui lòng nhập mật khẩu")]
-        [DataType(DataType.Password)]
-        [Display(Name = "Mật khẩu")]
-        public string? Password { get; set; }
-
-        [Display(Name = "Ghi nhớ đăng nhập")]
-        public bool RememberMe { get; set; }
+        [HttpGet("test-admin")]
+        [Authorize(Roles = "Admin")]
+        public IActionResult TestAdmin()
+        {
+            return Ok(new { message = "✅ You are an Admin! You can access this." });
+        }
     }
 }
