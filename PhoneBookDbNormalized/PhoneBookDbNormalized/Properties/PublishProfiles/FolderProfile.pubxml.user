@@ -3,7 +3,7 @@
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\Admin\Documents\GitHub\PhoneBookAPI\PhoneBookDbNormalized\PhoneBookDbNormalized\bin\Release\net8.0\publish\</_PublishTargetUrl>
-    <History>True|2025-11-13T07:05:36.8507898Z||;True|2025-11-13T09:42:46.1693013+07:00||;True|2025-11-12T14:34:19.6564046+07:00||;False|2025-11-12T14:32:00.1289244+07:00||;False|2025-11-12T14:30:42.5268240+07:00||;True|2025-11-12T14:26:46.5583519+07:00||;</History>
+    <History>True|2025-11-14T04:10:15.9379871Z||;True|2025-11-14T10:50:38.7343720+07:00||;True|2025-11-14T10:37:04.2484903+07:00||;True|2025-11-14T09:50:52.4812180+07:00||;True|2025-11-13T14:05:36.8507898+07:00||;True|2025-11-13T09:42:46.1693013+07:00||;True|2025-11-12T14:34:19.6564046+07:00||;False|2025-11-12T14:32:00.1289244+07:00||;False|2025-11-12T14:30:42.5268240+07:00||;True|2025-11-12T14:26:46.5583519+07:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>

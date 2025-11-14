@@ -45,7 +45,7 @@ namespace PhoneBookDbNormalized.Controllers
                 return Ok(employees);
         }
     }
-    [Authorize(Roles = "Manager")]
+    [Authorize(Roles = "Manager,Admin")]
     [ApiController]
     [Route("api/[controller]")]
     [Produces("application/json")]
@@ -132,7 +132,6 @@ namespace PhoneBookDbNormalized.Controllers
                 {
                     return NotFound(new { message = "Không tìm thấy nhân viên hoặc cập nhật thất bại" });
                 }
-
                 return Ok(new { message = "Cập nhật thông tin nhân viên thành công", userId });
            
         }

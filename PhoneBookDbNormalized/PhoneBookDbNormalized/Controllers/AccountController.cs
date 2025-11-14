@@ -8,7 +8,6 @@ using System.Security.Claims;
 
 namespace PhoneBookDbNormalized.Controllers
 {
-    [Authorize(Roles = "Manager,Admin")]
     [ApiController]
     [Route("api/[controller]")]
     public class AccountController : ControllerBase
@@ -52,7 +51,6 @@ namespace PhoneBookDbNormalized.Controllers
         }
 
         [HttpPost("logout")]
-        [Authorize]
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);

@@ -61,14 +61,14 @@ namespace PhoneBookDbNormalized.Controllers
         [Authorize(Roles = "Manager")]
         public IActionResult TestManager()
         {
-            return Ok(new { message = "✅ You are a Manager! You can access this." });
+            return Ok(new { message = "You are a Manager! You can access this." });
         }
 
         [HttpGet("test-admin")]
         [Authorize(Roles = "Admin")]
         public IActionResult TestAdmin()
         {
-            return Ok(new { message = "✅ You are an Admin! You can access this." });
+            return Ok(new { message = "You are an Admin! You can access this." });
         }
     }
 }
